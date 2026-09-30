@@ -33,11 +33,23 @@ animals.forEach(function (animal) {
 // ---------------------------------------------------------------------------
 // Task 3 — Log each animal again with for...of
 // ---------------------------------------------------------------------------
+// Show each animals age and adoption status using a for loop.
+for (const animal of animals) {
+	console.log("Age: " + animal.age + " Adopted: " + animal.adopted);
+}
 
 // ---------------------------------------------------------------------------
 // Task 4 — Adopted and available animals with .filter()
 // ---------------------------------------------------------------------------
-
+// Create 2 arrays and log them with .fliter() that shows adopted animals and avalable animals 
+const adoptedAnimals = animals.filter(function (animal) {
+	return animal.adopted;
+});
+const availableAnimals = animal.filter(function (animal) {
+	return !animal.adopted;
+});
+console.log(adoptedAnimals);
+console.log(availableAnimals);
 // ---------------------------------------------------------------------------
 // Task 5 — Available dogs with method chaining
 // ---------------------------------------------------------------------------
