@@ -66,7 +66,7 @@ console.log("Available dogs: ", availableDogs)
 // Task 6 — Average age with .reduce()
 // ---------------------------------------------------------------------------
 // Create a variable that stores the total age of all animals, then calculate the average age.
-const totalAge = anmial.reduce(function (sum, animal){
+const totalAge = animals.reduce(function (sum, animal){
 	return sum + animal.age;
 }, 0);
 const averageAge = totalAge / animals.length 
