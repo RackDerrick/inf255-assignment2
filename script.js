@@ -20,7 +20,7 @@ const animals = [
 const animalNames = animals.map(function (animal) {
     return animal.name;
 });
-console.log(animalNames);
+console.log("animal names:",animalNames);
 
 // ---------------------------------------------------------------------------
 // Task 2 — Log each animal with .forEach()
@@ -45,15 +45,23 @@ for (const animal of animals) {
 const adoptedAnimals = animals.filter(function (animal) {
 	return animal.adopted;
 });
-const availableAnimals = animal.filter(function (animal) {
+const availableAnimals = animals.filter(function (animal) {
 	return !animal.adopted;
 });
-console.log(adoptedAnimals);
-console.log(availableAnimals);
+console.log("adoptedAnimals:", adoptedAnimals);
+console.log("availableAnimals",availableAnimals);
 // ---------------------------------------------------------------------------
 // Task 5 — Available dogs with method chaining
 // ---------------------------------------------------------------------------
-
+// Creating an arry of just avaliable Dogs with .filter() and .map()
+const availableDogs = animals
+	.filter(function (animal) {
+		return animal.species === "dog" && !animal.adopted;
+	})
+	.map(function (animal) {
+		return animal.name;
+	});
+console.log("Available dogs: ", availableDogs)
 // ---------------------------------------------------------------------------
 // Task 6 — Average age with .reduce()
 // ---------------------------------------------------------------------------
