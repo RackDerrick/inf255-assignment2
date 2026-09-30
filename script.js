@@ -17,7 +17,9 @@ const animals = [
 // Task 1 — Animal names with .map()
 // ---------------------------------------------------------------------------
 // Create and log an array containing every animal's name.
-const animalNames = animals.map((animal) => animal.name);
+const animalNames = animals.map(function (animal) {
+    return animal.name;
+});
 console.log(animalNames);
 
 // ---------------------------------------------------------------------------
