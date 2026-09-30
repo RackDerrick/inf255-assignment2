@@ -74,14 +74,36 @@ console.log("Average age:", averageAge)
 // Task 7 — Write isCat, isAdopted, and getName
 // ---------------------------------------------------------------------------
 
-// ---------------------------------------------------------------------------
+function isCat(animal) {
+	return animal.species === "cat";
+}
+
+function isAdopted(animal) {
+	return animal.adopted === true;
+}
+
+function getName(animal) {
+	return animal.name;
+}
+
 // Task 8 — Adopted cats, using your own functions as callbacks
 // ---------------------------------------------------------------------------
+// Use previous functions as callbacks to .filter() and .map() and log all adopted cats 
+const adoptedCats = animals
+	.filter(isCat)
+	.filter(isAdopted)
+	.map(getName);
+console.log("Adopted cats: ", adoptedCats)
 
 // ---------------------------------------------------------------------------
 // Task 9 — Write makeSpeciesChecker (a closure)
 // ---------------------------------------------------------------------------
+// Remember the requested species so the returned function can check animals against it.
+function makeSpeciesChecker(species) {
+	return function (animal) {
+		return animal.species === species;
+	};
+}
 
-// ---------------------------------------------------------------------------
 // Task 10 — Build isDog and isRabbit, then log their names
 // ---------------------------------------------------------------------------
