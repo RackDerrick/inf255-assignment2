@@ -25,6 +25,10 @@ console.log(animalNames);
 // ---------------------------------------------------------------------------
 // Task 2 — Log each animal with .forEach()
 // ---------------------------------------------------------------------------
+// list every animal once and show its name and species in the console.
+animals.forEach(function (animal) {
+	console.log("Name: " + animal.name + " Species: " + animal.species);
+});
 
 // ---------------------------------------------------------------------------
 // Task 3 — Log each animal again with for...of
