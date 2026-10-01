@@ -107,3 +107,9 @@ function makeSpeciesChecker(species) {
 
 // Task 10 — Build isDog and isRabbit, then log their names
 // ---------------------------------------------------------------------------
+// Each checker remembers its species so it can filter the matching animals.
+const isDog = makeSpeciesChecker("dog");
+const isRabbit = makeSpeciesChecker("rabbit");
+
+console.log(animals.filter(isDog).map(getName));
+console.log(animals.filter(isRabbit).map(getName));
